@@ -231,6 +231,7 @@
 				TargetAttributes = {
 					922A73A11CEFA0B2006BBD3F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 2FPFNSZ873;
 					};
 					922A73B51CEFA0B2006BBD3F = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -491,10 +492,13 @@
 			baseConfigurationReference = ECA4EECED82C5261D5652628 /* Pods-Distractification-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Distractification-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "andrew-harris.com.Distractification-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -503,10 +507,13 @@
 			baseConfigurationReference = 1AE4D5B7732EB4C03E6FC580 /* Pods-Distractification-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Distractification-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "andrew-harris.com.Distractification-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
