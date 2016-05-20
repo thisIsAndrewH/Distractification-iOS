@@ -9,7 +9,6 @@
 //  Rname struct Config_template to Config
 //
 
-import Cocoa
 
 struct Config_template {
     static let slackApiToken = ""
