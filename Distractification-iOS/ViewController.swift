@@ -67,6 +67,7 @@ class ViewController: UIViewController {
         let token = Config.slackApiToken
         
         if token == "" {
+            //TODO: Show notification alert instead of crashing the app
             print("You must supply the Slack token in Config.swift to execute query.")
             exit(0)
         }
