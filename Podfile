@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'Distractification-iOS' do
   pod 'SwiftyJSON', :git =>'https://github.com/SwiftyJSON/SwiftyJSON.git'
+  pod 'Firebase'
 end
 
 target 'Distractification-iOSTests' do
