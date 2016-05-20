@@ -1,0 +1,6 @@
+framework module Pods_Distractification_iOS {
+  umbrella header "Pods-Distractification-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

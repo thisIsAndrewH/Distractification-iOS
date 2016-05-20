@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		125E0621BC52DE1CDB21B784 /* Pods_Distractification_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9832CBB72327521951C4BBFC /* Pods_Distractification_iOS.framework */; };
 		922A73A61CEFA0B2006BBD3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A73A51CEFA0B2006BBD3F /* AppDelegate.swift */; };
 		922A73A81CEFA0B2006BBD3F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A73A71CEFA0B2006BBD3F /* ViewController.swift */; };
 		922A73AB1CEFA0B2006BBD3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922A73A91CEFA0B2006BBD3F /* Main.storyboard */; };
@@ -14,6 +15,10 @@
 		922A73B01CEFA0B2006BBD3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922A73AE1CEFA0B2006BBD3F /* LaunchScreen.storyboard */; };
 		922A73BB1CEFA0B2006BBD3F /* Distractification_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A73BA1CEFA0B2006BBD3F /* Distractification_iOSTests.swift */; };
 		922A73C61CEFA0B3006BBD3F /* Distractification_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922A73C51CEFA0B3006BBD3F /* Distractification_iOSUITests.swift */; };
+		923E6F541CEFA67C000773C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923E6F531CEFA67C000773C7 /* GoogleService-Info.plist */; };
+		923E6F551CEFA67C000773C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923E6F531CEFA67C000773C7 /* GoogleService-Info.plist */; };
+		923E6F561CEFA67C000773C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 923E6F531CEFA67C000773C7 /* GoogleService-Info.plist */; };
+		923E6F581CEFA8D1000773C7 /* Config-template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E6F571CEFA8D1000773C7 /* Config-template.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1AE4D5B7732EB4C03E6FC580 /* Pods-Distractification-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Distractification-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Distractification-iOS/Pods-Distractification-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		922A73A21CEFA0B2006BBD3F /* Distractification-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Distractification-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		922A73A51CEFA0B2006BBD3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922A73A71CEFA0B2006BBD3F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +53,10 @@
 		922A73C11CEFA0B2006BBD3F /* Distractification-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Distractification-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		922A73C51CEFA0B3006BBD3F /* Distractification_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distractification_iOSUITests.swift; sourceTree = "<group>"; };
 		922A73C71CEFA0B3006BBD3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		923E6F531CEFA67C000773C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		923E6F571CEFA8D1000773C7 /* Config-template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config-template.swift"; sourceTree = "<group>"; };
+		9832CBB72327521951C4BBFC /* Pods_Distractification_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Distractification_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECA4EECED82C5261D5652628 /* Pods-Distractification-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Distractification-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Distractification-iOS/Pods-Distractification-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				125E0621BC52DE1CDB21B784 /* Pods_Distractification_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E89F0CAF385345EC61191F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9832CBB72327521951C4BBFC /* Pods_Distractification_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		922A73991CEFA0B2006BBD3F = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +100,8 @@
 				922A73B91CEFA0B2006BBD3F /* Distractification-iOSTests */,
 				922A73C41CEFA0B3006BBD3F /* Distractification-iOSUITests */,
 				922A73A31CEFA0B2006BBD3F /* Products */,
+				9575A246C1C5AC2121EDE099 /* Pods */,
+				8E89F0CAF385345EC61191F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,8 +121,10 @@
 				922A73A51CEFA0B2006BBD3F /* AppDelegate.swift */,
 				922A73A71CEFA0B2006BBD3F /* ViewController.swift */,
 				922A73A91CEFA0B2006BBD3F /* Main.storyboard */,
+				923E6F571CEFA8D1000773C7 /* Config-template.swift */,
 				922A73AC1CEFA0B2006BBD3F /* Assets.xcassets */,
 				922A73AE1CEFA0B2006BBD3F /* LaunchScreen.storyboard */,
+				923E6F531CEFA67C000773C7 /* GoogleService-Info.plist */,
 				922A73B11CEFA0B2006BBD3F /* Info.plist */,
 			);
 			path = "Distractification-iOS";
@@ -125,6 +148,15 @@
 			path = "Distractification-iOSUITests";
 			sourceTree = "<group>";
 		};
+		9575A246C1C5AC2121EDE099 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECA4EECED82C5261D5652628 /* Pods-Distractification-iOS.debug.xcconfig */,
+				1AE4D5B7732EB4C03E6FC580 /* Pods-Distractification-iOS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +164,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922A73CA1CEFA0B3006BBD3F /* Build configuration list for PBXNativeTarget "Distractification-iOS" */;
 			buildPhases = (
+				C12D85AF9A191F74168D96C4 /* Check Pods Manifest.lock */,
 				922A739E1CEFA0B2006BBD3F /* Sources */,
 				922A739F1CEFA0B2006BBD3F /* Frameworks */,
 				922A73A01CEFA0B2006BBD3F /* Resources */,
+				654BC73B04D0134FE4EBFC7D /* Embed Pods Frameworks */,
+				EE655B5505CC16187B1C96DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				922A73B01CEFA0B2006BBD3F /* LaunchScreen.storyboard in Resources */,
+				923E6F541CEFA67C000773C7 /* GoogleService-Info.plist in Resources */,
 				922A73AD1CEFA0B2006BBD3F /* Assets.xcassets in Resources */,
 				922A73AB1CEFA0B2006BBD3F /* Main.storyboard in Resources */,
 			);
@@ -239,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923E6F551CEFA67C000773C7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,10 +283,59 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923E6F561CEFA67C000773C7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		654BC73B04D0134FE4EBFC7D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Distractification-iOS/Pods-Distractification-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C12D85AF9A191F74168D96C4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE655B5505CC16187B1C96DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Distractification-iOS/Pods-Distractification-iOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		922A739E1CEFA0B2006BBD3F /* Sources */ = {
@@ -258,6 +344,7 @@
 			files = (
 				922A73A81CEFA0B2006BBD3F /* ViewController.swift in Sources */,
 				922A73A61CEFA0B2006BBD3F /* AppDelegate.swift in Sources */,
+				923E6F581CEFA8D1000773C7 /* Config-template.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +484,7 @@
 		};
 		922A73CB1CEFA0B3006BBD3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECA4EECED82C5261D5652628 /* Pods-Distractification-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Distractification-iOS/Info.plist";
@@ -408,6 +496,7 @@
 		};
 		922A73CC1CEFA0B3006BBD3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE4D5B7732EB4C03E6FC580 /* Pods-Distractification-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Distractification-iOS/Info.plist";
@@ -482,6 +571,7 @@
 				922A73CC1CEFA0B3006BBD3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		922A73CD1CEFA0B3006BBD3F /* Build configuration list for PBXNativeTarget "Distractification-iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +580,7 @@
 				922A73CF1CEFA0B3006BBD3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		922A73D01CEFA0B3006BBD3F /* Build configuration list for PBXNativeTarget "Distractification-iOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +589,7 @@
 				922A73D21CEFA0B3006BBD3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
