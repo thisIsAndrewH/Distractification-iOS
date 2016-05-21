@@ -26,6 +26,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var todayCount: UILabel!
     @IBOutlet weak var dateDisplay: UILabel!
 
+    @IBAction func crashTest(sender: AnyObject) {
+        //fatalError()
+        [0][1]
+        
+    }
+    
     @IBAction func runButton(sender: AnyObject) {
         var queryDateToday = getQueryDate(1) // query today
         var queryURLToday = createURL(queryDateToday)
