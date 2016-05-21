@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import Firebase
 
 class ViewController: UIViewController {
 
@@ -25,6 +26,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var todayCount: UILabel!
     @IBOutlet weak var dateDisplay: UILabel!
 
+    @IBAction func crashTest(sender: AnyObject) {
+        //fatalError()
+        [0][1]
+        
+    }
+    
     @IBAction func runButton(sender: AnyObject) {
         var queryDateToday = getQueryDate(1) // query today
         var queryURLToday = createURL(queryDateToday)
@@ -97,10 +104,20 @@ class ViewController: UIViewController {
             if isDayResponse == true {
                 self.todayCount.text = messageCount
                 print("testing set today count func: " + messageCount)
+                
+                FIRAnalytics.logEventWithName("dailyCount", parameters: [
+                    "name": "Daily Count",
+                    "full_text": messageCount
+                    ])
             }
             else {
                 self.weekCount.text = messageCount
                 print("testing set week count func: " + messageCount)
+                
+                FIRAnalytics.logEventWithName("weeklyCount", parameters: [
+                    "name": "Weekly Count",
+                    "full_text": messageCount
+                    ])
             }
         }
         
