@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import Firebase
 
 class ViewController: UIViewController {
 
@@ -97,10 +98,20 @@ class ViewController: UIViewController {
             if isDayResponse == true {
                 self.todayCount.text = messageCount
                 print("testing set today count func: " + messageCount)
+                
+                FIRAnalytics.logEventWithName("dailyCount", parameters: [
+                    "name": "Daily Count",
+                    "full_text": messageCount
+                    ])
             }
             else {
                 self.weekCount.text = messageCount
                 print("testing set week count func: " + messageCount)
+                
+                FIRAnalytics.logEventWithName("weeklyCount", parameters: [
+                    "name": "Weekly Count",
+                    "full_text": messageCount
+                    ])
             }
         }
         
