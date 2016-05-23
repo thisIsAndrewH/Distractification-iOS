@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import Firebase
+import FirebaseInstanceID
 
 class ViewController: UIViewController {
 
@@ -47,6 +48,7 @@ class ViewController: UIViewController {
         //Tests
         print("Time: " + dateDisplay.text!)
         print("URL param: " + String(queryURLToday))
+        print(FIRInstanceID.instanceID().token())
     }
     
     func getCurrentTime() -> String {
