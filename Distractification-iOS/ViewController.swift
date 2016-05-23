@@ -9,6 +9,7 @@
 import UIKit
 import SwiftyJSON
 import Firebase
+import FirebaseInstanceID
 
 class ViewController: UIViewController {
 
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
 
     @IBAction func crashTest(sender: AnyObject) {
         //fatalError()
+        FIRCrashMessage("Crash button clicked - not an actual error.")
         [0][1]
         
     }
@@ -46,6 +48,7 @@ class ViewController: UIViewController {
         //Tests
         print("Time: " + dateDisplay.text!)
         print("URL param: " + String(queryURLToday))
+        print(FIRInstanceID.instanceID().token())
     }
     
     func getCurrentTime() -> String {
