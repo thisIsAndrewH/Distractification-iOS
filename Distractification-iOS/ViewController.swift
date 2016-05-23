@@ -28,6 +28,7 @@ class ViewController: UIViewController {
 
     @IBAction func crashTest(sender: AnyObject) {
         //fatalError()
+        FIRCrashMessage("Crash button clicked - not an actual error.")
         [0][1]
         
     }
