@@ -127,7 +127,7 @@ class ViewController: UIViewController {
         //Checks if you're over the limit
         if isDayResponse == true && Int(messageCount) > Config.thresholdLimit {
             //TODO: resolve notifications for iOS
-            //showNotification(messageCount)
+            showNotification(messageCount)
         }
         
         return messageCount
@@ -163,16 +163,16 @@ class ViewController: UIViewController {
         task.resume()
     }
     
-    //TODO: Rewrite notification method for iOS
-    /*
+
     func showNotification(count: String) -> Void {
-        let notification = NSUserNotification()
-        notification.title = "Message Warning"
-        notification.informativeText = "You have sent a lot of messages in the last hour (" + count + "). Chill out."
-        notification.hasActionButton = false
-        NSUserNotificationCenter.defaultUserNotificationCenter().deliverNotification(notification)
+        
+        let localNotification = UILocalNotification()
+        localNotification.alertBody = "You have sent a lot of messages in the last hour (" + count + "). Chill out."
+        localNotification.alertTitle = "Message Warning"
+        localNotification.hasAction = false
+        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+
     }
- */
 
 }
 
