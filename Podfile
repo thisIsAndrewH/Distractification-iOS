@@ -7,6 +7,7 @@ target 'Distractification-iOS' do
   pod 'SwiftyJSON', :git =>'https://github.com/SwiftyJSON/SwiftyJSON.git'
   pod 'Firebase'
   pod 'Firebase/Crash'
+  pod 'Firebase/Messaging'
 end
 
 target 'Distractification-iOSTests' do
