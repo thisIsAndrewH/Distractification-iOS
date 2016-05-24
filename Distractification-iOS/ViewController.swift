@@ -109,8 +109,7 @@ class ViewController: UIViewController {
                 print("testing set today count func: " + messageCount)
                 
                 FIRAnalytics.logEventWithName("dailyCount", parameters: [
-                    "name": "Daily Count",
-                    "full_text": messageCount
+                    kFIRParameterValue: messageCount
                     ])
             }
             else {
@@ -118,8 +117,7 @@ class ViewController: UIViewController {
                 print("testing set week count func: " + messageCount)
                 
                 FIRAnalytics.logEventWithName("weeklyCount", parameters: [
-                    "name": "Weekly Count",
-                    "full_text": messageCount
+                    kFIRParameterValue: messageCount
                     ])
             }
         }
