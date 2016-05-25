@@ -41,10 +41,13 @@ class ViewController: UIViewController {
         if (reminderToggle.on) {
             reminderToggleValue = true
             userDefaults.setBool(true, forKey: "reminderToggleDefault")
+            setReminder()
+            
         }
         else {
             reminderToggleValue = false
             userDefaults.setBool(false, forKey: "reminderToggleDefault")
+            clearReminder()
             
         }
         print("Reminder value: " + String(reminderToggleValue))
@@ -192,7 +195,33 @@ class ViewController: UIViewController {
         localNotification.alertTitle = "Message Warning"
         localNotification.hasAction = false
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
-
+    }
+    
+    //checks to see if there's a reminder already set
+    func checkReminder() -> Bool {
+        let reminderStatus: Bool = false
+        //CODE
+        
+        return reminderStatus
+    }
+    
+    //Sets a reminder to date in the future based off of Now()
+    func setReminder() -> Void {
+        //CODE
+        
+    }
+    
+    func clearReminder() -> Void {
+        if checkReminder(){
+            //Reminder exists, so delete it
+        }
+    }
+    
+    func updateReminder() -> Void {
+        if checkReminder(){
+            clearReminder()
+            setReminder()
+        }
     }
 
 }
