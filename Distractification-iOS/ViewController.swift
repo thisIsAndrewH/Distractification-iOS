@@ -10,12 +10,20 @@ import UIKit
 import SwiftyJSON
 import Firebase
 import FirebaseInstanceID
+let userDefaults = NSUserDefaults.standardUserDefaults()
+
 
 class ViewController: UIViewController {
-
+    var reminderToggleValue:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
         // Do any additional setup after loading the view, typically from a nib.
+        if (reminderToggleStatus){
+            reminderToggle.setOn(reminderToggleStatus, animated: false)
+            print("toggle state: " + String(reminderToggleStatus))
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,9 +32,24 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var weekCount: UILabel!
+    
     @IBOutlet weak var todayCount: UILabel!
     @IBOutlet weak var dateDisplay: UILabel!
-
+    @IBOutlet weak var reminderToggle: UISwitch!
+    
+    @IBAction func reminderToggleSet(sender: AnyObject) {
+        if (reminderToggle.on) {
+            reminderToggleValue = true
+            userDefaults.setBool(true, forKey: "reminderToggleDefault")
+        }
+        else {
+            reminderToggleValue = false
+            userDefaults.setBool(false, forKey: "reminderToggleDefault")
+            
+        }
+        print("Reminder value: " + String(reminderToggleValue))
+    }
+    
     @IBAction func crashTest(sender: AnyObject) {
         //fatalError()
         FIRCrashMessage("Crash button clicked - not an actual error.")
