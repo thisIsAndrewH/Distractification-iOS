@@ -172,7 +172,6 @@ class ViewController: UIViewController {
         
         //Checks if you're over the limit
         if isDayResponse == true && Int(messageCount) > Config.thresholdLimit {
-            
             showMessageCountAlert(messageCount)
         }
         
@@ -243,7 +242,6 @@ class ViewController: UIViewController {
     func setReminder() -> Void {
         //no reminders already set, so set one up!
         if !checkReminder(){
-            
             //TODO: set repeat for each day
             let reminderFireDate = NSDate().dateByAddingTimeInterval(30)
             
