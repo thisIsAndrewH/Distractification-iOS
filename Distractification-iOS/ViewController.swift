@@ -153,8 +153,8 @@ class ViewController: UIViewController {
         
         //Checks if you're over the limit
         if isDayResponse == true && Int(messageCount) > Config.thresholdLimit {
-            //TODO: resolve notifications for iOS
-            showNotification(messageCount)
+            
+            showMessageCountAlert(messageCount)
         }
         
         return messageCount
@@ -191,13 +191,15 @@ class ViewController: UIViewController {
     }
     
 
-    func showNotification(count: String) -> Void {
+    func showMessageCountAlert(count: String) -> Void {
+        let title = "Message Warning"
+        let message = "You have sent " + count + " messages today. Considering chilling out."
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         
-        let localNotification = UILocalNotification()
-        localNotification.alertBody = "You have sent a lot of messages in the last hour (" + count + "). Chill out."
-        localNotification.alertTitle = "Message Warning"
-        localNotification.hasAction = false
-        UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+        let okayAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
+        alert.addAction(okayAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
     }
     
     //checks to see if there's a reminder already set
