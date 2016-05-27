@@ -3,7 +3,10 @@
 **Goal:** To gain a better understanding of how often messages are sent in a given day or week.
 
 ## Features
-* Queries message count of last week and last day
+* Queries message count of last week and last day.
+* Alert when config token is missing. Prevents running app.
+* Reminder to check on your status. Feature disabled by default.
+* Alert when you've gone over the message limit for a given day (in config).
 
 ## How To
 To run this app, you must create a test API token from the Slack development page. [https://api.slack.com/docs/oauth-test-tokens](https://api.slack.com/docs/oauth-test-tokens) (Future OAuth TBD.)
