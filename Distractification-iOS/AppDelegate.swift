@@ -85,6 +85,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FIRMessaging.messaging().disconnect()
         print("Disconnected from FCM.")
         // [END disconnect_from_fcm]
+        
+        let timeEnteredBackground = NSDate()
+        userDefaults.setValue(timeEnteredBackground, forKey: "timeEnteredBackground")
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
@@ -93,7 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-        
+        print("When the app was last used: " + String(userDefaults.valueForKey("timeEnteredBackground")))
         connectToFcm()
     }
 
