@@ -14,8 +14,6 @@ let userDefaults = NSUserDefaults.standardUserDefaults()
 
 
 class ViewController: UIViewController {
-    var reminderToggleValue:Bool = false
-    var reminderNotificationSet:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,17 +45,14 @@ class ViewController: UIViewController {
     
     @IBAction func reminderToggleSet(sender: AnyObject) {
         if (reminderToggle.on) {
-            reminderToggleValue = true
             userDefaults.setBool(true, forKey: "reminderToggleDefault")
             Reminder().setReminder()
         }
         else {
-            reminderToggleValue = false
+            
             userDefaults.setBool(false, forKey: "reminderToggleDefault")
             Reminder().clearReminder()
-            
         }
-        print("Reminder value: " + String(reminderToggleValue))
     }
     
     @IBAction func crashTest(sender: AnyObject) {
