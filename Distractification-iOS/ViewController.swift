@@ -20,11 +20,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
+        
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //set the toggle correctly
         if (reminderToggleStatus){
             reminderToggle.setOn(reminderToggleStatus, animated: false)
             print("toggle state: " + String(reminderToggleStatus))
         }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        checkToken()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,7 +40,7 @@ class ViewController: UIViewController {
     }
 
     @IBOutlet weak var weekCount: UILabel!
-    
+    @IBOutlet weak var runButton: UIButton!
     @IBOutlet weak var todayCount: UILabel!
     @IBOutlet weak var dateDisplay: UILabel!
     @IBOutlet weak var reminderToggle: UISwitch!
@@ -59,8 +66,7 @@ class ViewController: UIViewController {
         //FIRCrashMessage("Crash button clicked - not an actual error.")
         //[0][1]
         
-        checkReminder()
-        
+        checkToken()
     }
     
     @IBAction func runButton(sender: AnyObject) {
@@ -102,15 +108,28 @@ class ViewController: UIViewController {
         return dateReturn
     }
     
-    func createURL(dateAfter: String) -> NSURL {
+    func checkToken() {
+        //check config file for token
         let token = Config.slackApiToken
         
         if token == "" {
-            //TODO: Show notification alert instead of crashing the app
-            print("You must supply the Slack token in Config.swift to execute query.")
-            exit(0)
+            runButton.enabled = false
+            
+            let title = "Configuration Error"
+            let message = "You must supply the Slack token in Config.swift to execute query."
+            
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            
+            let dismissAction = UIAlertAction(title: "Dismiss", style: .Cancel, handler: nil)
+            alert.addAction(dismissAction)
+            
+            presentViewController(alert, animated: true, completion: nil)
         }
-        
+    }
+    
+    func createURL(dateAfter: String) -> NSURL {
+        //null check for token appears in viewDidAppear -> CheckToken()
+        let token = Config.slackApiToken
         let endpoint = "https://slack.com/api/search.messages?token="
             + token
             + "&query=from:me%20after:"
@@ -174,7 +193,7 @@ class ViewController: UIViewController {
         let task = session.dataTaskWithRequest(request) {
             [weak self] (let data, let response, let error) in
             
-            guard let _:NSData = data, let _:NSURLResponse = response  where error == nil else {
+            guard let _:NSData = data, let _:NSURLResponse = response where error == nil else {
                 print("error")
                 return
             }

@@ -135,6 +135,7 @@
                     <connections>
                         <outlet property="dateDisplay" destination="Hhg-W7-1wr" id="u0q-Bi-pos"/>
                         <outlet property="reminderToggle" destination="hQt-j2-NuN" id="eCp-hA-vXM"/>
+                        <outlet property="runButton" destination="VdZ-om-2qW" id="kg1-lG-kNf"/>
                         <outlet property="todayCount" destination="mFe-iK-RPf" id="bgy-y7-UHu"/>
                         <outlet property="weekCount" destination="abF-7L-uGL" id="vIV-34-lIF"/>
                     </connections>
