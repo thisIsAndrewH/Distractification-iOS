@@ -15,6 +15,7 @@ let userDefaults = NSUserDefaults.standardUserDefaults()
 
 class ViewController: UIViewController {
     var reminderToggleValue:Bool = false
+    var reminderNotificationSet:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,8 +56,10 @@ class ViewController: UIViewController {
     
     @IBAction func crashTest(sender: AnyObject) {
         //fatalError()
-        FIRCrashMessage("Crash button clicked - not an actual error.")
-        [0][1]
+        //FIRCrashMessage("Crash button clicked - not an actual error.")
+        //[0][1]
+        
+        checkReminder()
         
     }
     
@@ -199,37 +202,53 @@ class ViewController: UIViewController {
     
     //checks to see if there's a reminder already set
     func checkReminder() -> Bool {
-        let reminderStatus: Bool = false
-        //CODE
+        var reminderStatus: Bool = false
+        
+        let app:UIApplication = UIApplication.sharedApplication()
+        let notifcations = app.scheduledLocalNotifications
+        
+        if notifcations!.isEmpty {
+            print("Has no notifications")
+        }
+        else{
+            print("Has notifications: " + String(notifcations))
+            reminderStatus = true
+        }
         
         return reminderStatus
     }
     
     //Sets a reminder to date in the future based off of Now()
     func setReminder() -> Void {
-        let reminderFireDate = NSDate().dateByAddingTimeInterval(22)
+        //no reminders already set, so set one up!
+        if !checkReminder(){
+            
+            //TODO: set repeat for each day
+            let reminderFireDate = NSDate().dateByAddingTimeInterval(30)
+            
+            let reminderNotification = UILocalNotification()
+            reminderNotification.alertBody = "It's been a while since you've last checked in. Would you like to now?"
+            reminderNotification.alertTitle = "Slack check-in"
+            reminderNotification.hasAction = true
+            reminderNotification.alertAction = "Open me.."
+            reminderNotification.fireDate = reminderFireDate
+            UIApplication.sharedApplication().scheduleLocalNotification(reminderNotification)
+            
+            //sets bool to let other parts know that the notification is set
+            reminderNotificationSet = true
+        }
         
-        let reminderNotification = UILocalNotification()
-        reminderNotification.alertBody = "It's been a while since you've last checked in. Would you like to now?"
-        reminderNotification.alertTitle = "Slack check-in"
-        reminderNotification.hasAction = true
-        reminderNotification.alertAction = "Open me.."
-        reminderNotification.fireDate = reminderFireDate
-        UIApplication.sharedApplication().scheduleLocalNotification(reminderNotification)
     }
     
     func clearReminder() -> Void {
+        //Reminder exists, so delete it
         if checkReminder(){
-            //Reminder exists, so delete it
-        }
-    }
-    
-    func updateReminder() -> Void {
-        if checkReminder(){
-            clearReminder()
-            setReminder()
+            let app:UIApplication = UIApplication.sharedApplication()
+            for oneEvent in app.scheduledLocalNotifications! {
+                let notification = oneEvent as UILocalNotification
+                app.cancelLocalNotification(notification)
+            }
         }
     }
 
 }
-
