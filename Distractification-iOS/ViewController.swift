@@ -173,8 +173,7 @@ class ViewController: UIViewController {
     }
     
     //isDay determines if we're updating the "day" or "week" field in the UI
-    func data_request(url_to_request: NSURL, isDay: Bool)
-    {
+    func data_request(url_to_request: NSURL, isDay: Bool) -> Void {
         let url:NSURL = url_to_request
         let isDayResponse = isDay
         let session = NSURLSession.sharedSession()
