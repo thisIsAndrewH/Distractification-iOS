@@ -43,6 +43,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var dateDisplay: UILabel!
     @IBOutlet weak var reminderToggle: UISwitch!
     
+    @IBAction func launchSettings(sender: AnyObject) {
+    }
+    
     @IBAction func reminderToggleSet(sender: AnyObject) {
         if (reminderToggle.on) {
             userDefaults.setBool(true, forKey: "reminderToggleDefault")

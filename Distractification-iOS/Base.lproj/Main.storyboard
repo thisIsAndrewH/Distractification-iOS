@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -55,12 +55,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep track of the number of Slack messages you send." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ign-14-FVm">
-                                <rect key="frame" x="20" y="40" width="560" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAX-f4-8oD">
                                 <rect key="frame" x="20" y="550" width="45" height="30"/>
                                 <state key="normal" title="Crash!"/>
@@ -86,6 +80,26 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qau-kX-mlv">
+                                <rect key="frame" x="546" y="507" width="34" height="22"/>
+                                <state key="normal" title="Button" image="settings"/>
+                                <connections>
+                                    <action selector="launchSettings:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KcF-gt-fTp"/>
+                                    <segue destination="Z7f-uw-xhb" kind="show" id="uWE-ey-mXR"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qzw-gw-W03">
+                                <rect key="frame" x="5" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="nR5-me-kCO"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep track of the number of Slack messages you send." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ign-14-FVm">
+                                <rect key="frame" x="25" y="51" width="560" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -93,6 +107,8 @@
                             <constraint firstItem="VUJ-ZG-KYm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="8uJ-b1-Lbb"/>
                             <constraint firstItem="TAX-f4-8oD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9XP-z1-2FK"/>
                             <constraint firstItem="VUJ-ZG-KYm" firstAttribute="width" secondItem="yMh-kl-KAY" secondAttribute="width" id="AOl-tX-zg7"/>
+                            <constraint firstItem="qau-kX-mlv" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="BhE-CZ-4au"/>
+                            <constraint firstItem="hQt-j2-NuN" firstAttribute="top" secondItem="qau-kX-mlv" secondAttribute="bottom" constant="20" id="CNf-me-OGx"/>
                             <constraint firstItem="yMh-kl-KAY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="ERE-vV-vKK"/>
                             <constraint firstItem="DGV-LN-IWk" firstAttribute="top" secondItem="yMh-kl-KAY" secondAttribute="bottom" constant="22" id="Gdg-Dq-0HI"/>
                             <constraint firstItem="hQt-j2-NuN" firstAttribute="leading" secondItem="0TQ-9a-3KD" secondAttribute="trailing" constant="8.5" id="Kb1-7E-yhc"/>
@@ -103,7 +119,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0TQ-9a-3KD" secondAttribute="bottom" constant="25" id="QqH-C0-4fe"/>
                             <constraint firstItem="Hhg-W7-1wr" firstAttribute="trailing" secondItem="abF-7L-uGL" secondAttribute="trailing" id="Urt-Hk-Zmg"/>
                             <constraint firstItem="VUJ-ZG-KYm" firstAttribute="top" secondItem="DGV-LN-IWk" secondAttribute="bottom" constant="20" id="Uti-65-8Rb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ign-14-FVm" secondAttribute="trailing" id="WhX-ee-eue"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ign-14-FVm" secondAttribute="trailing" constant="-5" id="WhX-ee-eue"/>
                             <constraint firstItem="mFe-iK-RPf" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="d4M-0a-fFF"/>
                             <constraint firstItem="mFe-iK-RPf" firstAttribute="trailing" secondItem="abF-7L-uGL" secondAttribute="trailing" id="dAU-PF-ggQ"/>
                             <constraint firstItem="abF-7L-uGL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="hZl-ku-9mH"/>
@@ -114,14 +130,14 @@
                             <constraint firstItem="DGV-LN-IWk" firstAttribute="width" secondItem="yMh-kl-KAY" secondAttribute="width" id="nZT-2p-Gzw"/>
                             <constraint firstItem="ign-14-FVm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uA4-ie-03J"/>
                             <constraint firstItem="mFe-iK-RPf" firstAttribute="top" secondItem="abF-7L-uGL" secondAttribute="bottom" constant="20" id="uT8-5F-Zyw"/>
-                            <constraint firstItem="ign-14-FVm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="vb9-bP-qWz"/>
+                            <constraint firstItem="ign-14-FVm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="vb9-bP-qWz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hQt-j2-NuN" secondAttribute="bottom" constant="20" id="vjc-GE-MwO"/>
                             <constraint firstItem="mFe-iK-RPf" firstAttribute="trailing" secondItem="abF-7L-uGL" secondAttribute="trailing" id="wzF-En-lS9"/>
                             <constraint firstItem="DGV-LN-IWk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="x4I-Yi-u75"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="0TQ-9a-3KD" secondAttribute="bottom" constant="20" id="x7D-td-NTw"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VdZ-om-2qW" secondAttribute="bottom" constant="20" id="xl8-W8-LRI"/>
                             <constraint firstItem="Hhg-W7-1wr" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="ych-JH-mT8"/>
-                            <constraint firstItem="ign-14-FVm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zJR-45-oRk"/>
+                            <constraint firstItem="ign-14-FVm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="zJR-45-oRk"/>
                             <constraint firstItem="VdZ-om-2qW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zLj-MU-7NH"/>
                         </constraints>
                         <variation key="default">
@@ -144,5 +160,52 @@
             </objects>
             <point key="canvasLocation" x="302" y="315"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="K3p-eD-Mej">
+            <objects>
+                <viewController title="Settings" id="Z7f-uw-xhb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Wm-ny-qmD"/>
+                        <viewControllerLayoutGuide type="bottom" id="DpO-tg-9XM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Bl-g7-gqE">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpJ-E7-qku">
+                                <rect key="frame" x="175" y="242" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xKr-bQ-xKi">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Settings" id="5TR-bl-hbo"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oRJ-lI-7LD">
+                                <rect key="frame" x="20" y="550" width="46" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="7z6-FJ-uOw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xKr-bQ-xKi" firstAttribute="top" secondItem="0Bl-g7-gqE" secondAttribute="top" id="DQ5-fA-XHc"/>
+                            <constraint firstItem="xKr-bQ-xKi" firstAttribute="leading" secondItem="0Bl-g7-gqE" secondAttribute="leading" id="hD5-CO-n3h"/>
+                            <constraint firstAttribute="trailing" secondItem="xKr-bQ-xKi" secondAttribute="trailing" id="k63-mL-b0c"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikg-Hw-mXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="991" y="293"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="20" height="20"/>
+    </resources>
 </document>
