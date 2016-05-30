@@ -17,10 +17,10 @@ class Reminder: NSObject {
         let notifcations = app.scheduledLocalNotifications
         
         if notifcations!.isEmpty {
-            print("Has no notifications")
+            Utilities().printWrapper("Has no notifications")
         }
         else{
-            print("Has notifications: " + String(notifcations))
+            Utilities().printWrapper("Has notifications: " + String(notifcations))
             reminderStatus = true
         }
         
