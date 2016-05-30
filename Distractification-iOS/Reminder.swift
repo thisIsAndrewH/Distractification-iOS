@@ -38,7 +38,6 @@ class Reminder: NSObject {
             reminderNotification.alertBody = "It's been a while since you've last checked in. Would you like to now?"
             reminderNotification.alertTitle = "Slack check-in"
             reminderNotification.hasAction = true
-            reminderNotification.alertAction = "Open me.."
             reminderNotification.fireDate = reminderFireDate
             UIApplication.sharedApplication().scheduleLocalNotification(reminderNotification)
             
