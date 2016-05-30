@@ -24,7 +24,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        Utilities().printWrapper("toggle state: " + String(reminderToggleStatus))
+        //Utilities().printWrapper("toggle's actual state" + String(reminderToggle.on))
+        //Utilities().printWrapper("toggle state: " + String(reminderToggleStatus))
+        
+        
+        
 
         //set the toggle correctly
         if (reminderToggleStatus){
@@ -48,7 +52,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var dateDisplay: UILabel!
     @IBOutlet weak var reminderToggle: UISwitch!
     
+    @IBOutlet weak var settingsReminderToggle: UISwitch!
     @IBAction func reminderToggleSet(sender: AnyObject) {
+        
+        Utilities().printWrapper(String(settingsReminderToggle.on))
+        
+        
         if (reminderToggle.on) {
             userDefaults.setBool(true, forKey: "reminderToggleDefault")
             Reminder().setReminder()

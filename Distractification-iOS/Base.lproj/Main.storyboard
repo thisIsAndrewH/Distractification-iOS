@@ -176,6 +176,7 @@
                     <navigationItem key="navigationItem" id="I5V-cJ-z97"/>
                     <connections>
                         <outlet property="reminderToggle" destination="ITP-78-Idh" id="Qnu-ku-OZ6"/>
+                        <outlet property="settingsReminderToggle" destination="ITP-78-Idh" id="dtt-VD-4rT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikg-Hw-mXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
