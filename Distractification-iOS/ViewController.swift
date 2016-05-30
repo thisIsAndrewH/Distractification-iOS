@@ -134,29 +134,29 @@ class ViewController: UIViewController {
         return request
     }
     
-    func getMessageCount(data: String, isDay: Bool) -> String {
-        var messageCount = ""
+    func getMessageCount(data: String, isDay: Bool) -> Int {
+        var messageCount:Int = 0
         let isDayResponse = isDay
         if let dataFromString = data.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
             let jsonData = JSON(data: dataFromString)
             let totalMessagesSent = jsonData["messages","pagination","total_count"].stringValue
             
             //print("Total messages sent: " + totalMessagesSent)
-            messageCount = totalMessagesSent
+            messageCount = Int(totalMessagesSent)!
         }
         
         dispatch_async(dispatch_get_main_queue()) {
             if isDayResponse == true {
-                self.todayCount.text = messageCount
-                print("testing set today count func: " + messageCount)
+                self.todayCount.text = String(messageCount)
+                print("testing set today count func: " + String(messageCount))
                 
                 FIRAnalytics.logEventWithName("dailyCount", parameters: [
                     kFIRParameterValue: messageCount
                     ])
             }
             else {
-                self.weekCount.text = messageCount
-                print("testing set week count func: " + messageCount)
+                self.weekCount.text = String(messageCount)
+                print("testing set week count func: " + String(messageCount))
                 
                 FIRAnalytics.logEventWithName("weeklyCount", parameters: [
                     kFIRParameterValue: messageCount
@@ -203,9 +203,9 @@ class ViewController: UIViewController {
     }
     
 
-    func showMessageCountAlert(count: String) -> Void {
+    func showMessageCountAlert(count: Int) -> Void {
         let title = "Message Warning"
-        let message = "You have sent " + count + " messages today. Considering chilling out."
+        let message = "You have sent " + String(count) + " messages today. Considering chilling out."
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         
         let okayAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
