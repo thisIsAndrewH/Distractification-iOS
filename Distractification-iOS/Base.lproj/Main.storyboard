@@ -119,7 +119,7 @@
         <!--Settings-->
         <scene sceneID="K3p-eD-Mej">
             <objects>
-                <viewController title="Settings" id="Z7f-uw-xhb" customClass="ViewController" customModule="Distractification_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Settings" id="Z7f-uw-xhb" customClass="SettingsViewController" customModule="Distractification_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Wm-ny-qmD"/>
                         <viewControllerLayoutGuide type="bottom" id="DpO-tg-9XM"/>
@@ -149,13 +149,13 @@
                                 <rect key="frame" x="20" y="105" width="45" height="30"/>
                                 <state key="normal" title="Crash!"/>
                                 <connections>
-                                    <action selector="crashTest:" destination="Z7f-uw-xhb" eventType="touchUpInside" id="OD5-MJ-ZVx"/>
+                                    <action selector="crashTest:" destination="Z7f-uw-xhb" eventType="touchUpInside" id="gxV-BR-jT8"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ITP-78-Idh">
                                 <rect key="frame" x="531" y="64" width="51" height="31"/>
                                 <connections>
-                                    <action selector="reminderToggleSet:" destination="Z7f-uw-xhb" eventType="valueChanged" id="QG1-jR-6Xx"/>
+                                    <action selector="reminderToggleSet:" destination="Z7f-uw-xhb" eventType="valueChanged" id="rcy-c6-i2e"/>
                                 </connections>
                             </switch>
                         </subviews>
@@ -175,8 +175,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="sYJ-pt-2qG"/>
                     <navigationItem key="navigationItem" id="I5V-cJ-z97"/>
                     <connections>
-                        <outlet property="reminderToggle" destination="ITP-78-Idh" id="Qnu-ku-OZ6"/>
-                        <outlet property="settingsReminderToggle" destination="ITP-78-Idh" id="dtt-VD-4rT"/>
+                        <outlet property="settingsReminderToggle" destination="ITP-78-Idh" id="kTl-Uf-1Pf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikg-Hw-mXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
