@@ -15,4 +15,5 @@ struct Config_template {
     static let googleAnalyticsToken = ""
     static let thresholdLimit = 200 //number of messages sent a day - over produces notification
     static let timerSeconds: Double = 60*15
+    static let reminderTimer: Double = 60*60*24
 }
