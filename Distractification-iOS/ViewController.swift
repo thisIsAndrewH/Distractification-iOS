@@ -19,22 +19,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
-        
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        //Utilities().printWrapper("toggle's actual state" + String(reminderToggle.on))
-        //Utilities().printWrapper("toggle state: " + String(reminderToggleStatus))
-        
-        
-        
-
-        //set the toggle correctly
-        if (reminderToggleStatus){
-            //reminderToggle.setOn(reminderToggleStatus, animated: false)
-            //print("toggle state: " + String(reminderToggleStatus))
-        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -50,34 +35,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var runButton: UIButton!
     @IBOutlet weak var todayCount: UILabel!
     @IBOutlet weak var dateDisplay: UILabel!
-    @IBOutlet weak var reminderToggle: UISwitch!
-    
-    @IBOutlet weak var settingsReminderToggle: UISwitch!
-    @IBAction func reminderToggleSet(sender: AnyObject) {
-        
-        Utilities().printWrapper(String(settingsReminderToggle.on))
-        
-        
-        if (reminderToggle.on) {
-            userDefaults.setBool(true, forKey: "reminderToggleDefault")
-            Reminder().setReminder()
-        }
-        else {
-            
-            userDefaults.setBool(false, forKey: "reminderToggleDefault")
-            Reminder().clearReminder()
-        }
-    }
-    
-    
-    
-    @IBAction func crashTest(sender: AnyObject) {
-        //fatalError()
-        //FIRCrashMessage("Crash button clicked - not an actual error.")
-        //[0][1]
-        
-        Reminder().checkReminder()
-    }
     
     @IBAction func runButton(sender: AnyObject) {
         var queryDateToday = getQueryDate(1) // query today
@@ -227,7 +184,5 @@ class ViewController: UIViewController {
         
         presentViewController(alert, animated: true, completion: nil)
     }
-    
-   
 
 }
