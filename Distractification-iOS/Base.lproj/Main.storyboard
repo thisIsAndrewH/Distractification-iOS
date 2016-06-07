@@ -182,10 +182,10 @@
             </objects>
             <point key="canvasLocation" x="991" y="293"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--NavBarControls-->
         <scene sceneID="hyI-Rr-dU1">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Pj9-Sp-LKd" sceneMemberID="viewController">
+                <tabBarController title="NavBarControls" automaticallyAdjustsScrollViewInsets="NO" id="Pj9-Sp-LKd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Ucn-c4-tHl">
                         <autoresizingMask key="autoresizingMask"/>

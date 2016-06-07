@@ -70,10 +70,13 @@ class Reminder: NSObject {
         let okayAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
         notificationAlert.addAction(okayAction)
         
+        //find top controller to present the alert
+        var topController = UIApplication.sharedApplication().keyWindow!.rootViewController! as UIViewController
+        while ((topController.presentedViewController) != nil) {
+            topController = topController.presentedViewController!;
+        }
         
-        //TODO: somehow fix this to get it to show up
-        SettingsViewController().presentViewController(notificationAlert, animated: true, completion: nil)
-        
+        topController.presentViewController(notificationAlert, animated:true, completion:nil)
     }
 
 }
