@@ -149,7 +149,7 @@
                                 <rect key="frame" x="20" y="105" width="30" height="30"/>
                                 <state key="normal" title="Test"/>
                                 <connections>
-                                    <action selector="crashTest:" destination="Z7f-uw-xhb" eventType="touchUpInside" id="gxV-BR-jT8"/>
+                                    <action selector="test:" destination="Z7f-uw-xhb" eventType="touchUpInside" id="1Vb-ZY-LV0"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ITP-78-Idh">
