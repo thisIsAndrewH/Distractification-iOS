@@ -10,17 +10,27 @@ import UIKit
 
 class Reminder: NSObject {
     //checks to see if there's a reminder already set
-    func checkReminder() -> Bool {
+    func checkReminder(showAlert showAlert: Bool) -> Bool {
         var reminderStatus: Bool = false
-        
+        var notificationText: String
         let app:UIApplication = UIApplication.sharedApplication()
-        let notifcations = app.scheduledLocalNotifications
+        let notifications = app.scheduledLocalNotifications
         
-        if notifcations!.isEmpty {
-            Utilities().printWrapper("Has no notifications")
+        if notifications!.isEmpty {
+            notificationText = "Has no notifications"
+            if showAlert == true {
+                showAlertNotification(Message: notificationText)
+            } else {
+                Utilities().printWrapper(notificationText)
+            }
         }
         else{
-            Utilities().printWrapper("Has notifications: " + String(notifcations))
+            notificationText = "Has notifications: " + String(notifications)
+            if showAlert == true {
+                showAlertNotification(Message: notificationText)
+            } else {
+                Utilities().printWrapper(notificationText)
+            }
             reminderStatus = true
         }
         
@@ -30,7 +40,7 @@ class Reminder: NSObject {
     //Sets a reminder to date in the future based off of Now()
     func setReminder() -> Void {
         //no reminders already set, so set one up!
-        if !checkReminder(){
+        if !checkReminder(showAlert: false){
             //TODO: set repeat for each day
             let reminderFireDate = NSDate().dateByAddingTimeInterval(Config.reminderTimer)
             
@@ -47,13 +57,27 @@ class Reminder: NSObject {
     
     func clearReminder() -> Void {
         //Reminder exists, so delete it
-        if checkReminder(){
+        if checkReminder(showAlert: false){
             let app:UIApplication = UIApplication.sharedApplication()
             for oneEvent in app.scheduledLocalNotifications! {
                 let notification = oneEvent as UILocalNotification
                 app.cancelLocalNotification(notification)
             }
         }
+    }
+    
+    func showAlertNotification(Message Message: String) -> Void {
+        let alertTitle = "Reminder Status"
+        let notificationAlert = UIAlertController(title: alertTitle, message: Message, preferredStyle: .Alert)
+        
+        
+        let okayAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
+        notificationAlert.addAction(okayAction)
+        
+        
+        //TODO: somehow fix this to get it to show up
+        SettingsViewController().presentViewController(notificationAlert, animated: true, completion: nil)
+        
     }
 
 }

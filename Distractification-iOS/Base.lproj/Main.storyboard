@@ -146,8 +146,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAX-f4-8oD">
-                                <rect key="frame" x="20" y="105" width="45" height="30"/>
-                                <state key="normal" title="Crash!"/>
+                                <rect key="frame" x="20" y="105" width="30" height="30"/>
+                                <state key="normal" title="Test"/>
                                 <connections>
                                     <action selector="crashTest:" destination="Z7f-uw-xhb" eventType="touchUpInside" id="gxV-BR-jT8"/>
                                 </connections>
