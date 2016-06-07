@@ -35,7 +35,6 @@ let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
             Reminder().setReminder()
         }
         else {
-            
             userDefaults.setBool(false, forKey: "reminderToggleDefault")
             Reminder().clearReminder()
         }
