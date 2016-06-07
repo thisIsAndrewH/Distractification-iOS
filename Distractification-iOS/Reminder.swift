@@ -17,10 +17,10 @@ class Reminder: NSObject {
         let notifcations = app.scheduledLocalNotifications
         
         if notifcations!.isEmpty {
-            print("Has no notifications")
+            Utilities().printWrapper("Has no notifications")
         }
         else{
-            print("Has notifications: " + String(notifcations))
+            Utilities().printWrapper("Has notifications: " + String(notifcations))
             reminderStatus = true
         }
         
@@ -32,13 +32,12 @@ class Reminder: NSObject {
         //no reminders already set, so set one up!
         if !checkReminder(){
             //TODO: set repeat for each day
-            let reminderFireDate = NSDate().dateByAddingTimeInterval(30)
+            let reminderFireDate = NSDate().dateByAddingTimeInterval(Config.reminderTimer)
             
             let reminderNotification = UILocalNotification()
             reminderNotification.alertBody = "It's been a while since you've last checked in. Would you like to now?"
             reminderNotification.alertTitle = "Slack check-in"
             reminderNotification.hasAction = true
-            reminderNotification.alertAction = "Open me.."
             reminderNotification.fireDate = reminderFireDate
             UIApplication.sharedApplication().scheduleLocalNotification(reminderNotification)
             

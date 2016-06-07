@@ -13,25 +13,19 @@ import FirebaseInstanceID
 let userDefaults = NSUserDefaults.standardUserDefaults()
 
 
+
+
 class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
-        
         // Do any additional setup after loading the view, typically from a nib.
-        
-        //set the toggle correctly
-        if (reminderToggleStatus){
-            reminderToggle.setOn(reminderToggleStatus, animated: false)
-            print("toggle state: " + String(reminderToggleStatus))
-        }
     }
     
     override func viewDidAppear(animated: Bool) {
         checkToken()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,27 +35,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var runButton: UIButton!
     @IBOutlet weak var todayCount: UILabel!
     @IBOutlet weak var dateDisplay: UILabel!
-    @IBOutlet weak var reminderToggle: UISwitch!
-    
-    @IBAction func reminderToggleSet(sender: AnyObject) {
-        if (reminderToggle.on) {
-            userDefaults.setBool(true, forKey: "reminderToggleDefault")
-            Reminder().setReminder()
-        }
-        else {
-            
-            userDefaults.setBool(false, forKey: "reminderToggleDefault")
-            Reminder().clearReminder()
-        }
-    }
-    
-    @IBAction func crashTest(sender: AnyObject) {
-        //fatalError()
-        //FIRCrashMessage("Crash button clicked - not an actual error.")
-        //[0][1]
-        
-        Reminder().checkReminder()
-    }
     
     @IBAction func runButton(sender: AnyObject) {
         var queryDateToday = getQueryDate(1) // query today
@@ -75,9 +48,9 @@ class ViewController: UIViewController {
         //dateDisplay.stringValue = getCurrentTime()
         
         //Tests
-        print("Time: " + dateDisplay.text!)
-        print("URL param: " + String(queryURLToday))
-        print(FIRInstanceID.instanceID().token())
+        Utilities().printWrapper("Time: " + dateDisplay.text!)
+        Utilities().printWrapper("URL param: " + String(queryURLToday))
+        Utilities().printWrapper(String(FIRInstanceID.instanceID().token()))
     }
     
     func getCurrentTime() -> String {
@@ -134,29 +107,29 @@ class ViewController: UIViewController {
         return request
     }
     
-    func getMessageCount(data: String, isDay: Bool) -> String {
-        var messageCount = ""
+    func getMessageCount(data: String, isDay: Bool) -> Int {
+        var messageCount:Int = 0
         let isDayResponse = isDay
         if let dataFromString = data.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
             let jsonData = JSON(data: dataFromString)
             let totalMessagesSent = jsonData["messages","pagination","total_count"].stringValue
             
             //print("Total messages sent: " + totalMessagesSent)
-            messageCount = totalMessagesSent
+            messageCount = Int(totalMessagesSent)!
         }
         
         dispatch_async(dispatch_get_main_queue()) {
             if isDayResponse == true {
-                self.todayCount.text = messageCount
-                print("testing set today count func: " + messageCount)
+                self.todayCount.text = String(messageCount)
+                Utilities().printWrapper("testing set today count func: " + String(messageCount))
                 
                 FIRAnalytics.logEventWithName("dailyCount", parameters: [
                     kFIRParameterValue: messageCount
                     ])
             }
             else {
-                self.weekCount.text = messageCount
-                print("testing set week count func: " + messageCount)
+                self.weekCount.text = String(messageCount)
+                Utilities().printWrapper("testing set week count func: " + String(messageCount))
                 
                 FIRAnalytics.logEventWithName("weeklyCount", parameters: [
                     kFIRParameterValue: messageCount
@@ -173,8 +146,7 @@ class ViewController: UIViewController {
     }
     
     //isDay determines if we're updating the "day" or "week" field in the UI
-    func data_request(url_to_request: NSURL, isDay: Bool)
-    {
+    func data_request(url_to_request: NSURL, isDay: Bool) -> Void {
         let url:NSURL = url_to_request
         let isDayResponse = isDay
         let session = NSURLSession.sharedSession()
@@ -201,11 +173,10 @@ class ViewController: UIViewController {
         }
         task.resume()
     }
-    
 
-    func showMessageCountAlert(count: String) -> Void {
+    func showMessageCountAlert(count: Int) -> Void {
         let title = "Message Warning"
-        let message = "You have sent " + count + " messages today. Considering chilling out."
+        let message = "You have sent " + String(count) + " messages today. Considering chilling out."
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         
         let okayAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
@@ -213,7 +184,5 @@ class ViewController: UIViewController {
         
         presentViewController(alert, animated: true, completion: nil)
     }
-    
-    
 
 }
