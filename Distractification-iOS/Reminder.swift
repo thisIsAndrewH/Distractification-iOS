@@ -41,18 +41,14 @@ class Reminder: NSObject {
     func setReminder() -> Void {
         //no reminders already set, so set one up!
         if !checkReminder(showAlert: false){
-            //TODO: set repeat for each day
             let reminderFireDate = NSDate().dateByAddingTimeInterval(Config.reminderTimer)
-            
             let reminderNotification = UILocalNotification()
             reminderNotification.alertBody = "It's been a while since you've last checked in. Would you like to now?"
             reminderNotification.alertTitle = "Slack check-in"
             reminderNotification.hasAction = true
             reminderNotification.fireDate = reminderFireDate
             UIApplication.sharedApplication().scheduleLocalNotification(reminderNotification)
-            
         }
-        
     }
     
     func clearReminder() -> Void {
