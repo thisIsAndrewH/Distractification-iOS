@@ -66,7 +66,6 @@ class Reminder: NSObject {
         let alertTitle = "Reminder Status"
         let notificationAlert = UIAlertController(title: alertTitle, message: Message, preferredStyle: .Alert)
         
-        
         let okayAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
         notificationAlert.addAction(okayAction)
         
