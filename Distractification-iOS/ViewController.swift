@@ -45,7 +45,6 @@ class ViewController: UIViewController {
         queryURLToday = createURL(queryDateToday)
         data_request(queryURLToday, isDay: false)
         dateDisplay.text = getCurrentTime()
-        //dateDisplay.stringValue = getCurrentTime()
         
         //Tests
         Utilities().printWrapper("Time: " + dateDisplay.text!)
@@ -84,9 +83,7 @@ class ViewController: UIViewController {
             
             let title = "Configuration Error"
             let message = "You must supply the Slack token in Config.swift to execute query."
-            
             let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-            
             let dismissAction = UIAlertAction(title: "Dismiss", style: .Cancel, handler: nil)
             alert.addAction(dismissAction)
             
@@ -114,7 +111,6 @@ class ViewController: UIViewController {
             let jsonData = JSON(data: dataFromString)
             let totalMessagesSent = jsonData["messages","pagination","total_count"].stringValue
             
-            //print("Total messages sent: " + totalMessagesSent)
             messageCount = Int(totalMessagesSent)!
         }
         
@@ -169,7 +165,6 @@ class ViewController: UIViewController {
             }
             
             self?.getMessageCount(dataString as String, isDay: isDayResponse)
-            //print(dataString)
         }
         task.resume()
     }

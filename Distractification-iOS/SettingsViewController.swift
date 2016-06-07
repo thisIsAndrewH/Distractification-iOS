@@ -18,7 +18,7 @@ let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
         //set the toggle correctly
         if (reminderToggleStatus){
             settingsReminderToggle.setOn(reminderToggleStatus, animated: false)
-            print("toggle state: " + String(reminderToggleStatus))
+            Utilities().printWrapper("toggle state: " + String(reminderToggleStatus))
         }
     }
 
@@ -30,8 +30,6 @@ let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
     @IBOutlet weak var settingsReminderToggle: UISwitch!
     
     @IBAction func reminderToggleSet(sender: AnyObject) {
-        Utilities().printWrapper(String(settingsReminderToggle.on))
-        
         if (settingsReminderToggle.on) {
             userDefaults.setBool(true, forKey: "reminderToggleDefault")
             Reminder().setReminder()
@@ -48,7 +46,7 @@ let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
         //FIRCrashMessage("Crash button clicked - not an actual error.")
         //[0][1]
         
-        Reminder().checkReminder()
+        Reminder().checkReminder(showAlert: true)
     }
 
     /*
