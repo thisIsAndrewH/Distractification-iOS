@@ -18,6 +18,13 @@ If interested in helping, please email me for collaboration: <aharris86@gmail.co
 
 Follow me on Twitter: [@thisIsAndrewH](http://www.twitter.com/thisIsAndrewH)
 
+##Screen Shots
+#Main View
+![main](https://raw.githubusercontent.com/thisIsAndrewH/Distractification-iOS/development/images/main.png)
+#Settings View
+![alt tag](https://raw.githubusercontent.com/thisIsAndrewH/Distractification-iOS/development/images/settings.png)
+
+
 -----
 
 Disclaimer: This application was not created by, affiliated with, or supported by Slack Technologies, Inc.
