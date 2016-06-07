@@ -41,7 +41,7 @@ let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
         }
     }
     
-    @IBAction func crashTest(sender: AnyObject) {
+    @IBAction func test(sender: AnyObject) {
         //fatalError()
         //FIRCrashMessage("Crash button clicked - not an actual error.")
         //[0][1]
