@@ -75,6 +75,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        
+        if (SettingsViewController().reminderToggleStatus == true)
+        {
+            Reminder().setReminder()
+        }
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -92,6 +97,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        
+        //clears reminder since it's not needed if the user is already in the app
+        
+        if (SettingsViewController().reminderToggleStatus == true)
+        {
+            Reminder().clearReminder()
+        }
     }
 
     func applicationDidBecomeActive(application: UIApplication) {

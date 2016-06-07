@@ -9,11 +9,10 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
-
         // Do any additional setup after loading the view.
         
         //set the toggle correctly
