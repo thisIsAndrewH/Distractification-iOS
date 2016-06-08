@@ -8,6 +8,7 @@ target 'Distractification-iOS' do
   pod 'Firebase'
   pod 'Firebase/Crash'
   pod 'Firebase/Messaging'
+  pod 'LicensesKit'
 end
 
 target 'Distractification-iOSTests' do
