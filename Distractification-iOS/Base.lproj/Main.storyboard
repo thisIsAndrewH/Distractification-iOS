@@ -156,7 +156,7 @@
                                 <rect key="frame" x="20" y="145" width="61" height="30"/>
                                 <state key="normal" title="Licenses"/>
                                 <connections>
-                                    <segue destination="5xz-j6-MEG" kind="show" id="rMe-R2-Zix"/>
+                                    <segue destination="loM-58-0dX" kind="show" id="FzW-t7-aAH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -172,7 +172,9 @@
                             <constraint firstItem="ITP-78-Idh" firstAttribute="top" secondItem="1Wm-ny-qmD" secondAttribute="bottom" constant="10" id="eVc-mj-bdS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="I5V-cJ-z97"/>
+                    <navigationItem key="navigationItem" title="Settings" id="I5V-cJ-z97">
+                        <barButtonItem key="backBarButtonItem" title="Settings" id="FJ7-Ba-NGe"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="settingsReminderToggle" destination="ITP-78-Idh" id="kTl-Uf-1Pf"/>
                     </connections>
@@ -260,4 +262,7 @@
         <image name="mainIcon" width="20" height="20"/>
         <image name="settings" width="20" height="20"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="FzW-t7-aAH"/>
+    </inferredMetricsTieBreakers>
 </document>
