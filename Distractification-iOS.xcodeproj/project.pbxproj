@@ -21,6 +21,7 @@
 		923E6F581CEFA8D1000773C7 /* Config-template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E6F571CEFA8D1000773C7 /* Config-template.swift */; };
 		923E6F5A1CEFAB6D000773C7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923E6F591CEFAB6D000773C7 /* Config.swift */; };
 		928ABB8B1D0622CF00E000FD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928ABB8A1D0622CF00E000FD /* SettingsViewController.swift */; };
+		928ABB8F1D08A8DB00E000FD /* LicenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928ABB8E1D08A8DB00E000FD /* LicenseViewController.swift */; };
 		92BB59721CFCA84F00315170 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BB59711CFCA84F00315170 /* Utilities.swift */; };
 		92DF55B31CF80C3200135B64 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92DF55B21CF80C3200135B64 /* Reminder.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		923E6F571CEFA8D1000773C7 /* Config-template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Config-template.swift"; sourceTree = "<group>"; };
 		923E6F591CEFAB6D000773C7 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		928ABB8A1D0622CF00E000FD /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		928ABB8E1D08A8DB00E000FD /* LicenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LicenseViewController.swift; sourceTree = "<group>"; };
 		92BB59711CFCA84F00315170 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		92DF55B21CF80C3200135B64 /* Reminder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		9832CBB72327521951C4BBFC /* Pods_Distractification_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Distractification_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,6 +134,7 @@
 				92DF55B21CF80C3200135B64 /* Reminder.swift */,
 				92BB59711CFCA84F00315170 /* Utilities.swift */,
 				922A73A91CEFA0B2006BBD3F /* Main.storyboard */,
+				928ABB8E1D08A8DB00E000FD /* LicenseViewController.swift */,
 				923E6F571CEFA8D1000773C7 /* Config-template.swift */,
 				922A73AC1CEFA0B2006BBD3F /* Assets.xcassets */,
 				922A73AE1CEFA0B2006BBD3F /* LaunchScreen.storyboard */,
@@ -355,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				928ABB8F1D08A8DB00E000FD /* LicenseViewController.swift in Sources */,
 				92BB59721CFCA84F00315170 /* Utilities.swift in Sources */,
 				922A73A81CEFA0B2006BBD3F /* ViewController.swift in Sources */,
 				928ABB8B1D0622CF00E000FD /* SettingsViewController.swift in Sources */,
