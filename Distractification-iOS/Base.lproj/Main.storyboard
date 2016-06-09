@@ -103,7 +103,7 @@
         <!--Licenses-->
         <scene sceneID="9ch-br-kNl">
             <objects>
-                <viewController id="loM-58-0dX" customClass="LicenseViewController" customModule="Distractification_iOS" sceneMemberID="viewController">
+                <viewController title="Licenses" id="loM-58-0dX" customClass="LicenseViewController" customModule="Distractification_iOS" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="12y-G0-5sW"/>
                         <viewControllerLayoutGuide type="bottom" id="ojC-Sy-XlS"/>
@@ -186,6 +186,7 @@
         <!--NavBarControls-->
         <scene sceneID="hyI-Rr-dU1">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nyJ-of-OWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController title="NavBarControls" automaticallyAdjustsScrollViewInsets="NO" id="Pj9-Sp-LKd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Ucn-c4-tHl">
@@ -197,14 +198,13 @@
                         <segue destination="hM8-sP-HKF" kind="relationship" relationship="viewControllers" id="nbn-1o-Gk2"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nyJ-of-OWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="248" y="-572"/>
         </scene>
-        <!--Main-->
+        <!--NavToMain-->
         <scene sceneID="IhW-r3-q0J">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KYH-Ib-Msc" sceneMemberID="viewController">
+                <navigationController title="NavToMain" automaticallyAdjustsScrollViewInsets="NO" id="KYH-Ib-Msc" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Main" image="mainIcon" id="JBm-4r-GTL"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XqC-Eh-VD6">
@@ -220,10 +220,10 @@
             </objects>
             <point key="canvasLocation" x="248" y="233"/>
         </scene>
-        <!--Settings-->
+        <!--NavToSettings-->
         <scene sceneID="Med-ym-rcZ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hM8-sP-HKF" sceneMemberID="viewController">
+                <navigationController title="NavToSettings" automaticallyAdjustsScrollViewInsets="NO" id="hM8-sP-HKF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" image="settings" id="sYJ-pt-2qG"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WDm-VP-Shc">
@@ -239,10 +239,10 @@
             </objects>
             <point key="canvasLocation" x="1051" y="-572"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--NavToLicenses-->
         <scene sceneID="IwU-7M-nZl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5xz-j6-MEG" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavToLicenses" title="NavToLicenses" automaticallyAdjustsScrollViewInsets="NO" id="5xz-j6-MEG" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GU8-x8-ame">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -263,6 +263,6 @@
         <image name="settings" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FzW-t7-aAH"/>
+        <segue reference="QIP-eL-tsQ"/>
     </inferredMetricsTieBreakers>
 </document>
