@@ -76,7 +76,7 @@ class ViewController: UIViewController {
     
     func checkToken() {
         //check config file for token
-        let token = Config.slackApiToken
+        let token = userDefaults.stringForKey("APIKeyStoredSetting")
         
         if token == "" {
             runButton.enabled = false
@@ -88,6 +88,8 @@ class ViewController: UIViewController {
             alert.addAction(dismissAction)
             
             presentViewController(alert, animated: true, completion: nil)
+        } else {
+            runButton.enabled = true
         }
     }
     
