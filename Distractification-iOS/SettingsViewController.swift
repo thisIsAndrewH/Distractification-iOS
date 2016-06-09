@@ -66,6 +66,15 @@ let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
         
         Utilities().printWrapper("New api key " + (apiKey.text ?? ""))
     }
+    @IBAction func findAPIKey(sender: AnyObject) {
+        //go to slack documentation
+        let slackURL = "https://api.slack.com/docs/oauth-test-tokens"
+        
+        if let url = NSURL(string: slackURL) {
+            UIApplication.sharedApplication().openURL(url)
+        }
+        
+    }
     
     /*
     // MARK: - Navigation
