@@ -163,6 +163,11 @@
                                 <rect key="frame" x="20" y="285" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="apiKeySet:" destination="Z7f-uw-xhb" eventType="primaryActionTriggered" id="bwJ-Ex-0QC"/>
+                                    <action selector="apiKeySet:" destination="Z7f-uw-xhb" eventType="editingDidEnd" id="fkt-QX-Vrp"/>
+                                    <action selector="apiKeySet:" destination="Z7f-uw-xhb" eventType="valueChanged" id="yxD-jq-ndk"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -184,6 +189,7 @@
                         <barButtonItem key="backBarButtonItem" title="Settings" id="FJ7-Ba-NGe"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="apiKey" destination="i7c-4D-j1D" id="Hxq-OI-ZYh"/>
                         <outlet property="settingsReminderToggle" destination="ITP-78-Idh" id="kTl-Uf-1Pf"/>
                     </connections>
                 </viewController>

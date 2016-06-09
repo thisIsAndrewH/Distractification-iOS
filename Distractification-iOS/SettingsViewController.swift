@@ -20,14 +20,25 @@ let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
             settingsReminderToggle.setOn(reminderToggleStatus, animated: false)
             Utilities().printWrapper("toggle state: " + String(reminderToggleStatus))
         }
+        
+        //set API Key
+        let apiKeyStoredSetting = userDefaults.stringForKey("APIKeyStoredSetting")
+        Utilities().printWrapper("API Key Stored: " + (apiKeyStoredSetting ?? ""))
+        
+        if apiKeyStoredSetting != "" {
+            apiKey.text = userDefaults.stringForKey("APIKeyStoredSetting")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBOutlet weak var apiKey: UITextField!
     
     @IBOutlet weak var settingsReminderToggle: UISwitch!
+    
     
     @IBAction func reminderToggleSet(sender: AnyObject) {
         if (settingsReminderToggle.on) {
@@ -46,8 +57,16 @@ let reminderToggleStatus = userDefaults.boolForKey("reminderToggleDefault")
         //[0][1]
         
         Reminder().checkReminder(showAlert: true)
+        
     }
 
+    @IBAction func apiKeySet(sender: AnyObject) {
+        userDefaults.setValue(apiKey.text, forKey: "APIKeyStoredSetting")
+        self.view.endEditing(true)
+        
+        Utilities().printWrapper("New api key " + (apiKey.text ?? ""))
+    }
+    
     /*
     // MARK: - Navigation
 
