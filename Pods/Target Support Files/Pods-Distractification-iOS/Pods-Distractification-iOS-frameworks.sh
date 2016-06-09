@@ -84,8 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-Distractification-iOS/LicensesKit.framework"
+  install_framework "Pods-Distractification-iOS/StringBuilder.framework"
   install_framework "Pods-Distractification-iOS/SwiftyJSON.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-Distractification-iOS/LicensesKit.framework"
+  install_framework "Pods-Distractification-iOS/StringBuilder.framework"
   install_framework "Pods-Distractification-iOS/SwiftyJSON.framework"
 fi

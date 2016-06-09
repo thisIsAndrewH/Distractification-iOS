@@ -171,7 +171,7 @@ class ViewController: UIViewController {
 
     func showMessageCountAlert(count: Int) -> Void {
         let title = "Message Warning"
-        let message = "You have sent " + String(count) + " messages today. Considering chilling out."
+        let message = "You have sent " + String(count) + " messages today. Consider chilling out."
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
         
         let okayAction = UIAlertAction(title: "Okay", style: .Default, handler: nil)
