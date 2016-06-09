@@ -159,15 +159,23 @@
                                     <segue destination="loM-58-0dX" kind="show" id="FzW-t7-aAH"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Slack API Key" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="i7c-4D-j1D">
+                                <rect key="frame" x="20" y="285" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TAX-f4-8oD" firstAttribute="top" secondItem="0TQ-9a-3KD" secondAttribute="bottom" constant="10" id="2QQ-nU-8vc"/>
                             <constraint firstItem="9HG-g3-kpj" firstAttribute="leading" secondItem="0Bl-g7-gqE" secondAttribute="leadingMargin" id="4ba-sK-O2v"/>
                             <constraint firstItem="0TQ-9a-3KD" firstAttribute="top" secondItem="1Wm-ny-qmD" secondAttribute="bottom" constant="10" id="58N-ac-Uje"/>
+                            <constraint firstItem="i7c-4D-j1D" firstAttribute="trailing" secondItem="0Bl-g7-gqE" secondAttribute="trailingMargin" id="8v7-Ze-9Pj"/>
                             <constraint firstItem="TAX-f4-8oD" firstAttribute="leading" secondItem="0Bl-g7-gqE" secondAttribute="leadingMargin" id="9LU-Pk-Tpl"/>
                             <constraint firstItem="ITP-78-Idh" firstAttribute="trailing" secondItem="0Bl-g7-gqE" secondAttribute="trailingMargin" id="PdF-Gi-A3f"/>
                             <constraint firstItem="0TQ-9a-3KD" firstAttribute="leading" secondItem="0Bl-g7-gqE" secondAttribute="leadingMargin" id="Su9-P6-1Pl"/>
+                            <constraint firstItem="i7c-4D-j1D" firstAttribute="leading" secondItem="0Bl-g7-gqE" secondAttribute="leadingMargin" id="VEb-6D-Euo"/>
+                            <constraint firstItem="i7c-4D-j1D" firstAttribute="centerY" secondItem="0Bl-g7-gqE" secondAttribute="centerY" id="bam-jd-Cy2"/>
                             <constraint firstItem="9HG-g3-kpj" firstAttribute="top" secondItem="TAX-f4-8oD" secondAttribute="bottom" constant="10" id="dSF-dv-oqW"/>
                             <constraint firstItem="ITP-78-Idh" firstAttribute="top" secondItem="1Wm-ny-qmD" secondAttribute="bottom" constant="10" id="eVc-mj-bdS"/>
                         </constraints>
@@ -186,7 +194,6 @@
         <!--NavBarControls-->
         <scene sceneID="hyI-Rr-dU1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nyJ-of-OWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController title="NavBarControls" automaticallyAdjustsScrollViewInsets="NO" id="Pj9-Sp-LKd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Ucn-c4-tHl">
@@ -198,6 +205,7 @@
                         <segue destination="hM8-sP-HKF" kind="relationship" relationship="viewControllers" id="nbn-1o-Gk2"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nyJ-of-OWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="248" y="-572"/>
         </scene>
@@ -263,6 +271,6 @@
         <image name="settings" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="QIP-eL-tsQ"/>
+        <segue reference="FzW-t7-aAH"/>
     </inferredMetricsTieBreakers>
 </document>
