@@ -28,6 +28,11 @@ class LicenseViewController: LicensesViewController {
     
     func setupLicenses() -> Void {
         showsFullLicenseText = false
+        let appName = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleName") as! String
+        
+        pageHeader = appName + " made possible by:"
+        
+        
         
         let iconNotice = Notice(name: "\"Doodle\" icon created by Kyle Tezak, from the Noun Project", url: "https://thenounproject.com/term/doodle/197599/", copyright: "\"Doodle\" icon created by Kyle Tezak, from the Noun Project", license: CreativeCommonsAttributionNoDerivs30Unported())
         addNotice(iconNotice)
